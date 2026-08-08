@@ -17,6 +17,8 @@ Rev1 where one was specified.
 | 2 | Panasonic EVQPUC02K-compatible reset switch | PCB footprint is Panasonic EVQPUL/EVQPUC |
 | 2 | PJ-320A TRRS jack | XKB Connectivity-compatible footprint |
 | 2 | RP2040 Community Edition controller | Same model on both halves; USB-C recommended |
+| 4 | 1x12 female socket strip | 2.54 mm pitch; two rows per keyboard half |
+| 4 | 1x12 male pin strip | 2.54 mm pitch; omit if already installed on controllers |
 | 34 | Topre-compatible OEM housings | MX-compatible sliders required by housing orientation |
 | 34 | MX-compatible Topre sliders | Match housings and keycaps |
 | 34 | Topre domes | Select weight to preference |
@@ -32,6 +34,11 @@ listed in the pinned QMK documentation include Liatris, Helios, Elite-Pi,
 Frood, Sea-Picro EXT, and Splinky. Do not substitute an ATmega32U4 Pro Micro.
 The SparkFun Pro Micro RP2040 uses a separate QMK converter target and is not
 the locked Revision A firmware target.
+
+The normal JLCPCB package leaves the controllers and their socket strips for
+post-PCBA installation because each controller footprint represents two
+physically separate socket rows. Buy controllers with male pins already fitted
+or have a local electronics technician solder the sockets and pins.
 
 ## Do not populate
 

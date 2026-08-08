@@ -51,7 +51,8 @@ export_board bottom-plate \
 python3 "$project_root/tests/verify-production.py"
 
 checksum_file="$(mktemp "$generated/.SHA256SUMS.XXXXXX")"
-find "$generated" -type f ! -name 'SHA256SUMS' ! -name '.SHA256SUMS.*' \
-    -print0 | sort -z | xargs -0 sha256sum > "$checksum_file"
+find "$generated" -path "$generated/jlcpcb" -prune -o \
+    -type f ! -name 'SHA256SUMS' ! -name '.SHA256SUMS.*' -print0 \
+    | sort -z | xargs -0 sha256sum > "$checksum_file"
 mv "$checksum_file" "$generated/SHA256SUMS"
 printf 'Generated manufacturing outputs under %s\n' "$generated"

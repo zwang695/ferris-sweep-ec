@@ -14,6 +14,7 @@ Last automated run: 2026-08-08 with KiCad 10.0.5 and upstream QMK commit
 | Firmware | Pass | Default and diagnostic keymaps lint and compile to RP2040 CE UF2 on regular upstream QMK |
 | Behavioral model | Pass | Mapping, threshold dimensions, hysteresis, drift, rapid taps, and simultaneous-key tests |
 | Manufacturing output | Pass | Gerbers, separate PTH/NPTH drills, BOM, placement CSV, renders, UF2s, and checksums regenerate and pass structure checks |
+| JLCPCB wired package | Pass | Filtered 38-placement BOM/CPL, top and bottom paste, mixed-assembly Gerbers, plate ZIPs, assembly drawings, and portable checksums |
 | Absolute EC analog margin | Pending physical data | Real dome/spring capacitance and assembled parasitics are not available before fabrication |
 | Physical keyboard | Pending fabrication | Requires assembly, ADC capture, threshold calibration, and functional testing |
 

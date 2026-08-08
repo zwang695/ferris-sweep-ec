@@ -7,6 +7,8 @@
   QMK.
 - `generate-production` regenerates Gerbers, drills, BOM, placement, renders,
   and checksums.
+- `generate-jlcpcb` creates the filtered wired-only JLCPCB PCBA/plate upload
+  package, assembly drawings, and checksums.
 - `check-all` runs the complete automated pre-fabrication gate.
 
 The `import-tako-*` scripts are provenance-preserving baseline importers, not
@@ -17,6 +19,7 @@ Examples:
 ```sh
 ./scripts/kicad-cli version
 ./scripts/check-all
+./scripts/generate-jlcpcb
 ```
 
 The Flatpak sandbox may request permission to access the project directory.

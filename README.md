@@ -50,3 +50,6 @@ Run `./scripts/check-all` for the complete automated gate. See
 `docs/tooling.md`, `docs/verification-status.md`, `docs/bom.md`, and
 `docs/bring-up.md` for setup, evidence, parts, and physical validation. The
 Tako/Cipulot comparison is in `docs/ec-cross-check.md`.
+
+For the wired JLCPCB fabrication and assembly package, run
+`./scripts/generate-jlcpcb` and follow `production/jlcpcb/README.md`.

@@ -6,4 +6,5 @@ project_root="$(cd "$(dirname "$0")/.." && pwd)"
 "$project_root/scripts/check-models"
 "$project_root/scripts/check-firmware"
 "$project_root/scripts/generate-production"
+"$project_root/scripts/generate-jlcpcb"
 printf 'All currently automated Revision A gates passed.\n'

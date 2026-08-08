@@ -1,0 +1,63 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+project_root="$(cd "$(dirname "$0")/.." && pwd)"
+board="$project_root/hardware/rev-a/ferris-sweep-ec.kicad_pcb"
+output="$project_root/production/generated/jlcpcb"
+scratch="$(mktemp -d "$project_root/production/.jlcpcb.XXXXXX")"
+trap 'rm -rf "$scratch"' EXIT
+
+export_gerbers() {
+    local name="$1"
+    local source_board="$2"
+    local layers="$3"
+    local directory="$scratch/$name-gerbers"
+    mkdir -p "$directory"
+    "$project_root/scripts/kicad-cli" pcb export gerbers \
+        --output "$directory" --layers "$layers" "$source_board"
+    "$project_root/scripts/kicad-cli" pcb export drill \
+        --output "$directory" --excellon-units mm \
+        --excellon-separate-th "$source_board"
+    (cd "$directory" && zip -q -9 "$scratch/$name-gerbers.zip" ./*)
+}
+
+export_gerbers controller "$board" \
+    'F.Cu,B.Cu,F.Paste,B.Paste,F.SilkS,B.SilkS,F.Mask,B.Mask,Edge.Cuts'
+export_gerbers topre-plate \
+    "$project_root/mechanical/topre-plate/ferris-sweep-ec-topre-plate.kicad_pcb" \
+    'F.Cu,B.Cu,F.SilkS,B.SilkS,F.Mask,B.Mask,Edge.Cuts'
+export_gerbers bottom-plate \
+    "$project_root/mechanical/bottom-plate/ferris-sweep-ec-bottom-plate.kicad_pcb" \
+    'F.Cu,B.Cu,F.SilkS,B.SilkS,F.Mask,B.Mask,Edge.Cuts'
+
+"$project_root/scripts/kicad-cli" pcb export pos \
+    --output "$scratch/controller-raw-positions.csv" --format csv --units mm \
+    --side both --exclude-dnp "$board"
+
+python3 "$project_root/scripts/make-jlcpcb-files.py" \
+    --parts "$project_root/production/jlcpcb/parts.csv" \
+    --positions "$scratch/controller-raw-positions.csv" \
+    --bom "$scratch/controller-bom.csv" \
+    --cpl "$scratch/controller-cpl.csv"
+
+"$project_root/scripts/kicad-cli" pcb export pdf --mode-single \
+    --output "$scratch/controller-assembly-top.pdf" \
+    --layers 'F.Fab,F.SilkS,Edge.Cuts' --sketch-pads-on-fab-layers \
+    --hide-DNP-footprints-on-fab-layers --black-and-white --scale 1 "$board"
+"$project_root/scripts/kicad-cli" pcb export pdf --mode-single --mirror \
+    --output "$scratch/controller-assembly-bottom.pdf" \
+    --layers 'B.Fab,B.SilkS,Edge.Cuts' --sketch-pads-on-fab-layers \
+    --hide-DNP-footprints-on-fab-layers --black-and-white --scale 1 "$board"
+
+cp "$project_root/production/jlcpcb/README.md" "$scratch/ORDER-INSTRUCTIONS.md"
+python3 "$project_root/tests/verify-jlcpcb.py" "$scratch"
+rm "$scratch/controller-raw-positions.csv"
+
+(cd "$scratch" && find . -maxdepth 1 -type f ! -name SHA256SUMS -print0 \
+    | sort -z | xargs -0 sha256sum > SHA256SUMS)
+
+rm -rf "$output"
+mkdir -p "$(dirname "$output")"
+mv "$scratch" "$output"
+trap - EXIT
+printf 'Generated JLCPCB upload package under %s\n' "$output"
