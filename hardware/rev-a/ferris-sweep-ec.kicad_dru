@@ -1,0 +1,9 @@
+(version 1)
+
+# Tako Rev1 is physically built with these symmetric reset-switch/mounting-hole
+# placements. Keep the proven geometry and allow only these two courtyard pairs
+# to overlap; all other courtyard overlaps remain errors.
+(rule "Proven Tako reset and mounting-hole placement"
+  (condition "(A.Reference == 'RSW1' && B.Reference == 'H14') || (A.Reference == 'H14' && B.Reference == 'RSW1') || (A.Reference == 'RSW101' && B.Reference == 'H114') || (A.Reference == 'H114' && B.Reference == 'RSW101')")
+  (constraint courtyard_clearance (min -1mm))
+)

@@ -1,0 +1,57 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+project_root="$(cd "$(dirname "$0")/.." && pwd)"
+generated="$project_root/production/generated"
+layers="F.Cu,B.Cu,F.SilkS,B.SilkS,F.Mask,B.Mask,Edge.Cuts"
+
+export_board() {
+    local name="$1"
+    local board="$2"
+    local output="$generated/$name"
+    mkdir -p "$output/gerbers"
+    "$project_root/scripts/kicad-cli" pcb export gerbers \
+        --output "$output/gerbers" --layers "$layers" "$board"
+    "$project_root/scripts/kicad-cli" pcb export drill \
+        --output "$output/gerbers" --excellon-units mm \
+        --excellon-separate-th --generate-map --map-format pdf \
+        --generate-report --report-path "$output/drill-report.txt" "$board"
+}
+
+export_board controller "$project_root/hardware/rev-a/ferris-sweep-ec.kicad_pcb"
+export_board topre-plate \
+    "$project_root/mechanical/topre-plate/ferris-sweep-ec-topre-plate.kicad_pcb"
+export_board bottom-plate \
+    "$project_root/mechanical/bottom-plate/ferris-sweep-ec-bottom-plate.kicad_pcb"
+
+"$project_root/scripts/kicad-cli" pcb render \
+    --output "$generated/controller/controller-top.png" \
+    --width 1600 --height 900 --side top --quality basic \
+    "$project_root/hardware/rev-a/ferris-sweep-ec.kicad_pcb"
+"$project_root/scripts/kicad-cli" pcb render \
+    --output "$generated/topre-plate/topre-plate-top.png" \
+    --width 1200 --height 900 --side top --quality basic \
+    "$project_root/mechanical/topre-plate/ferris-sweep-ec-topre-plate.kicad_pcb"
+"$project_root/scripts/kicad-cli" pcb render \
+    --output "$generated/bottom-plate/bottom-plate-top.png" \
+    --width 1200 --height 900 --side top --quality basic \
+    "$project_root/mechanical/bottom-plate/ferris-sweep-ec-bottom-plate.kicad_pcb"
+
+"$project_root/scripts/kicad-cli" sch export bom \
+    --output "$generated/controller/bom.csv" \
+    --fields 'Reference,Value,Footprint,QUANTITY,DNP' \
+    --labels 'Refs,Value,Footprint,Qty,DNP' \
+    --group-by 'Value,Footprint' --exclude-dnp \
+    "$project_root/hardware/rev-a/ferris-sweep-ec.kicad_sch"
+"$project_root/scripts/kicad-cli" pcb export pos \
+    --output "$generated/controller/positions.csv" --format csv --units mm \
+    --side both --exclude-dnp \
+    "$project_root/hardware/rev-a/ferris-sweep-ec.kicad_pcb"
+
+python3 "$project_root/tests/verify-production.py"
+
+checksum_file="$(mktemp "$generated/.SHA256SUMS.XXXXXX")"
+find "$generated" -type f ! -name 'SHA256SUMS' ! -name '.SHA256SUMS.*' \
+    -print0 | sort -z | xargs -0 sha256sum > "$checksum_file"
+mv "$checksum_file" "$generated/SHA256SUMS"
+printf 'Generated manufacturing outputs under %s\n' "$generated"

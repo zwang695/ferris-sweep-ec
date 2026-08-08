@@ -1,0 +1,38 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+project_root="$(cd "$(dirname "$0")/.." && pwd)"
+source_root="$project_root/references/upstream/tako"
+source_plate="$source_root/rev1/plates/bottom"
+destination="$project_root/mechanical/bottom-plate"
+expected_commit="5aa952ab5d5dc0c83aef36756252b27efc64e4cd"
+
+actual_commit="$(git -C "$source_root" rev-parse HEAD)"
+if [[ "$actual_commit" != "$expected_commit" ]]; then
+    printf 'Refusing unreviewed source commit %s (expected %s).\n' "$actual_commit" "$expected_commit" >&2
+    exit 1
+fi
+if [[ -e "$destination/ferris-sweep-ec-bottom-plate.kicad_pcb" ]]; then
+    printf 'Refusing to overwrite the existing bottom plate.\n' >&2
+    exit 1
+fi
+
+mkdir -p "$destination"
+cp "$source_plate/bottom_plate.kicad_pcb" \
+    "$destination/ferris-sweep-ec-bottom-plate.kicad_pcb"
+cp "$source_plate/bottom_plate.kicad_pro" \
+    "$destination/ferris-sweep-ec-bottom-plate.kicad_pro"
+cp "$source_plate/fp-lib-table" "$destination/fp-lib-table"
+
+sed -i \
+    -e 's/tako:/ferris_sweep_ec:/g' \
+    "$destination/ferris-sweep-ec-bottom-plate.kicad_pcb"
+sed -i \
+    -e 's/(name "tako")/(name "ferris_sweep_ec")/g' \
+    -e 's#${KIPRJMOD}/../../pcb/tako.pretty#${KIPRJMOD}/../../hardware/rev-a/ferris_sweep_ec.pretty#g' \
+    "$destination/fp-lib-table"
+
+flatpak run --command=python org.kicad.KiCad \
+    "$project_root/scripts/repair-bottom-plate.py"
+
+printf 'Imported bottom plate from Tako Rev1 %s\n' "$actual_commit"

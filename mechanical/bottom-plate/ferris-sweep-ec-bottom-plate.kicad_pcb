@@ -1,0 +1,2879 @@
+(kicad_pcb
+	(version 20260206)
+	(generator "pcbnew")
+	(generator_version "10.0")
+	(general
+		(thickness 1.6)
+		(legacy_teardrops no)
+	)
+	(paper "A4")
+	(layers
+		(0 "F.Cu" signal)
+		(2 "B.Cu" signal)
+		(9 "F.Adhes" user "F.Adhesive")
+		(11 "B.Adhes" user "B.Adhesive")
+		(13 "F.Paste" user)
+		(15 "B.Paste" user)
+		(5 "F.SilkS" user "F.Silkscreen")
+		(7 "B.SilkS" user "B.Silkscreen")
+		(1 "F.Mask" user)
+		(3 "B.Mask" user)
+		(17 "Dwgs.User" user "User.Drawings")
+		(19 "Cmts.User" user "User.Comments")
+		(21 "Eco1.User" user "User.Eco1")
+		(23 "Eco2.User" user "User.Eco2")
+		(25 "Edge.Cuts" user)
+		(27 "Margin" user)
+		(31 "F.CrtYd" user "F.Courtyard")
+		(29 "B.CrtYd" user "B.Courtyard")
+		(35 "F.Fab" user)
+		(33 "B.Fab" user)
+		(39 "User.1" user)
+		(41 "User.2" user)
+		(43 "User.3" user)
+		(45 "User.4" user)
+		(47 "User.5" user)
+		(49 "User.6" user)
+		(51 "User.7" user)
+		(53 "User.8" user)
+		(55 "User.9" user)
+	)
+	(setup
+		(stackup
+			(layer "F.SilkS"
+				(type "Top Silk Screen")
+			)
+			(layer "F.Paste"
+				(type "Top Solder Paste")
+			)
+			(layer "F.Mask"
+				(type "Top Solder Mask")
+				(thickness 0.01)
+			)
+			(layer "F.Cu"
+				(type "copper")
+				(thickness 0.035)
+			)
+			(layer "dielectric 1"
+				(type "core")
+				(thickness 1.51)
+				(material "FR4")
+				(epsilon_r 4.5)
+				(loss_tangent 0.02)
+			)
+			(layer "B.Cu"
+				(type "copper")
+				(thickness 0.035)
+			)
+			(layer "B.Mask"
+				(type "Bottom Solder Mask")
+				(thickness 0.01)
+			)
+			(layer "B.Paste"
+				(type "Bottom Solder Paste")
+			)
+			(layer "B.SilkS"
+				(type "Bottom Silk Screen")
+			)
+			(copper_finish "None")
+			(dielectric_constraints no)
+		)
+		(pad_to_mask_clearance 0)
+		(allow_soldermask_bridges_in_footprints no)
+		(tenting
+			(front yes)
+			(back yes)
+		)
+		(covering
+			(front no)
+			(back no)
+		)
+		(plugging
+			(front no)
+			(back no)
+		)
+		(capping no)
+		(filling no)
+		(grid_origin 263.738903 76.593651)
+		(pcbplotparams
+			(layerselection 0x00000000_00000000_55555555_5755f5ff)
+			(plot_on_all_layers_selection 0x00000000_00000000_00000000_00000000)
+			(disableapertmacros no)
+			(usegerberextensions yes)
+			(usegerberattributes yes)
+			(usegerberadvancedattributes yes)
+			(creategerberjobfile yes)
+			(dashed_line_dash_ratio 12)
+			(dashed_line_gap_ratio 3)
+			(svgprecision 4)
+			(plotframeref no)
+			(mode 1)
+			(useauxorigin no)
+			(pdf_front_fp_property_popups yes)
+			(pdf_back_fp_property_popups yes)
+			(pdf_metadata yes)
+			(pdf_single_document no)
+			(dxfpolygonmode yes)
+			(dxfimperialunits yes)
+			(dxfusepcbnewfont yes)
+			(psnegative no)
+			(psa4output no)
+			(plot_black_and_white yes)
+			(sketchpadsonfab no)
+			(plotpadnumbers no)
+			(hidednponfab no)
+			(sketchdnponfab yes)
+			(crossoutdnponfab yes)
+			(subtractmaskfromsilk yes)
+			(outputformat 1)
+			(mirror no)
+			(drillshape 0)
+			(scaleselection 1)
+			(outputdirectory "bottom_gerber")
+		)
+	)
+	(footprint "ferris_sweep_ec:M2_hole_4.2mm"
+		(layer "F.Cu")
+		(uuid "0f4cc7f1-4a4b-4f42-bb8e-e3d88e67d671")
+		(at 163.844577 65)
+		(descr "Mounting Hole 2.2mm, no annular, M2")
+		(tags "mounting hole 2.2mm no annular m2")
+		(property "Reference" "H1"
+			(at -0.95 -0.55 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "91bd9d54-eefe-45df-81f9-ba6dd5259c18")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Value" "MountingHole"
+			(at 0 0.55 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "81457346-6fbc-45d9-a8b3-28838de6ad0c")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "2c476a49-c340-4599-91e6-1775c3cfc615")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Mounting Hole without connection"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "2caf5c78-88b5-498f-bf45-79d0163a0a8d")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(path "/978bf0b5-8f00-45e0-affc-187725a33ebe")
+		(sheetfile "tako.kicad_sch")
+		(attr exclude_from_pos_files exclude_from_bom)
+		(duplicate_pad_numbers_are_jumpers no)
+		(fp_text user "${REFERENCE}"
+			(at 0.3 0 0)
+			(layer "F.Fab")
+			(uuid "b480d730-0fbc-4195-bca8-b973bfd820e7")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(pad "" thru_hole circle
+			(at 0 0)
+			(size 4.2 4.2)
+			(drill 2.2)
+			(layers "*.Cu" "*.Mask")
+			(remove_unused_layers no)
+			(uuid "9bba2fdd-baa0-4861-8ba1-1037d75133fe")
+		)
+		(embedded_fonts no)
+	)
+	(footprint "ferris_sweep_ec:M2_hole_4.2mm"
+		(layer "F.Cu")
+		(uuid "37ebdc84-c749-434e-8a8d-a6e4bd24aba4")
+		(at 220.994586 53.5)
+		(descr "Mounting Hole 2.2mm, no annular, M2")
+		(tags "mounting hole 2.2mm no annular m2")
+		(property "Reference" "H9"
+			(at -0.95 -0.55 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "9e81ce1d-f9e3-44c9-9fc8-bcdebf946b14")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Value" "MountingHole"
+			(at 0 0.55 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "56223a3c-a0a2-4279-8c6b-3ae2908dab84")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "1ccc0473-31ce-4941-aa23-7e153df6d7b6")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Mounting Hole without connection"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "f29e0844-a412-422d-a114-f52934420a9b")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(path "/8680237b-ac25-41eb-8a9f-66025a97c444")
+		(sheetfile "tako.kicad_sch")
+		(attr exclude_from_pos_files exclude_from_bom)
+		(duplicate_pad_numbers_are_jumpers no)
+		(fp_text user "${REFERENCE}"
+			(at 0.3 0 0)
+			(layer "F.Fab")
+			(uuid "a9ea8176-23c7-4323-9e2d-1a276cca75a6")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(pad "" thru_hole circle
+			(at 0 0)
+			(size 4.2 4.2)
+			(drill 2.2)
+			(layers "*.Cu" "*.Mask")
+			(remove_unused_layers no)
+			(uuid "79b58646-4cf1-442a-ab0e-a5d58436e6c8")
+		)
+		(embedded_fonts no)
+	)
+	(footprint "ferris_sweep_ec:M2_hole_4.2mm"
+		(layer "F.Cu")
+		(uuid "41fed71d-547e-45a2-a290-db6d7123a1e7")
+		(at 240.044584 56)
+		(descr "Mounting Hole 2.2mm, no annular, M2")
+		(tags "mounting hole 2.2mm no annular m2")
+		(property "Reference" "H10"
+			(at -0.95 -0.55 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "843503c8-00cf-4de0-ada2-f933ea61eaa6")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Value" "MountingHole"
+			(at 0 0.55 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "667f5518-41bb-4658-80fc-defef4596b7a")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "e7b149dd-927c-4190-b2ee-b1880a780c05")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Mounting Hole without connection"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "9daba237-f350-4f72-be71-5f4b6c76b029")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(path "/567e9265-074e-4e54-80c8-4a9b38072821")
+		(sheetfile "tako.kicad_sch")
+		(attr exclude_from_pos_files exclude_from_bom)
+		(duplicate_pad_numbers_are_jumpers no)
+		(fp_text user "${REFERENCE}"
+			(at 0.3 0 0)
+			(layer "F.Fab")
+			(uuid "710b3ef8-f82b-4925-a49f-d4fb2e47875f")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(pad "" thru_hole circle
+			(at 0 0)
+			(size 4.2 4.2)
+			(drill 2.2)
+			(layers "*.Cu" "*.Mask")
+			(remove_unused_layers no)
+			(uuid "64776d47-4cc6-4dc3-ad50-a3a234fbe021")
+		)
+		(embedded_fonts no)
+	)
+	(footprint "ferris_sweep_ec:M2_hole_4.2mm"
+		(layer "F.Cu")
+		(uuid "50a474e1-cb75-4095-9e25-397b8cf772ef")
+		(at 240.502931 126.577037 -22.5)
+		(descr "Mounting Hole 2.2mm, no annular, M2")
+		(tags "mounting hole 2.2mm no annular m2")
+		(property "Reference" "H13"
+			(at -0.95 -0.55 337.5)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "8eaa07aa-c427-42c9-92ed-3ce75bcc08c0")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Value" "MountingHole"
+			(at 0 0.55 337.5)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "e244591f-2231-45f3-88ea-7cf2459747c2")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 337.5)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "836a4ccd-0c46-4997-ade7-af8d0e7ee9aa")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Mounting Hole without connection"
+			(at 0 0 337.5)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "700f929f-3933-4c5a-bc41-c57cdf8193aa")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(path "/b2d057d2-be42-4fe4-95a8-ea94c85dbcb1")
+		(sheetfile "tako.kicad_sch")
+		(attr exclude_from_pos_files exclude_from_bom)
+		(duplicate_pad_numbers_are_jumpers no)
+		(fp_text user "${REFERENCE}"
+			(at 0.3 0 337.5)
+			(layer "F.Fab")
+			(uuid "16cd5740-7d07-423d-82a2-becffc6e1882")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(pad "" thru_hole circle
+			(at 0 0 337.5)
+			(size 4.2 4.2)
+			(drill 2.2)
+			(layers "*.Cu" "*.Mask")
+			(remove_unused_layers no)
+			(uuid "cd2f4611-b86e-4c8e-962c-4b005264ee04")
+		)
+		(embedded_fonts no)
+	)
+	(footprint "ferris_sweep_ec:M2_hole_4.2mm"
+		(layer "F.Cu")
+		(uuid "525f0537-a9b6-4fc3-b5b9-cf61fa8eff12")
+		(at 163.844575 84.719433)
+		(descr "Mounting Hole 2.2mm, no annular, M2")
+		(tags "mounting hole 2.2mm no annular m2")
+		(property "Reference" "H2"
+			(at -0.95 -0.55 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "790b17ee-e4e1-4a0d-9667-37c0cce1e898")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Value" "MountingHole"
+			(at 0 0.55 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "ab27f9cc-ea48-4ed0-b3be-b55266632826")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "3a2492bf-c483-4295-9a76-cb8590117021")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Mounting Hole without connection"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "3e6cc04c-447c-4392-85bc-5138e47446ef")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(path "/78a73d04-b116-413f-a80b-6f3f4ced0ef4")
+		(sheetfile "tako.kicad_sch")
+		(attr exclude_from_pos_files exclude_from_bom)
+		(duplicate_pad_numbers_are_jumpers no)
+		(fp_text user "${REFERENCE}"
+			(at 0.3 0 0)
+			(layer "F.Fab")
+			(uuid "76f013e7-3cd4-43e6-9668-9a8c428ad9f9")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(pad "" thru_hole circle
+			(at 0 0)
+			(size 4.2 4.2)
+			(drill 2.2)
+			(layers "*.Cu" "*.Mask")
+			(remove_unused_layers no)
+			(uuid "eaae0fd1-829c-4ac4-a1b5-b765763eefba")
+		)
+		(embedded_fonts no)
+	)
+	(footprint "ferris_sweep_ec:M2_hole_4.2mm"
+		(layer "F.Cu")
+		(uuid "5c9e039f-2f93-4e80-a3a9-c9732eceb9d5")
+		(at 177.844584 115.294441)
+		(descr "Mounting Hole 2.2mm, no annular, M2")
+		(tags "mounting hole 2.2mm no annular m2")
+		(property "Reference" "H5"
+			(at -0.95 -0.55 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "0b20e727-725d-4359-8d12-e74253a15893")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Value" "MountingHole"
+			(at 0 0.55 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "7dec13a2-074a-4d7d-8edd-0e11273f0b98")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "b77bfec9-3b15-4df9-862a-b5c33bdd2dc5")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Mounting Hole without connection"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "d7caa728-cafb-4f07-bd2a-37d85c4785a2")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(path "/a5982172-917e-4a71-a8d4-6c14cae8fa03")
+		(sheetfile "tako.kicad_sch")
+		(attr through_hole exclude_from_pos_files exclude_from_bom)
+		(duplicate_pad_numbers_are_jumpers no)
+		(fp_text user "${REFERENCE}"
+			(at 0.3 0 0)
+			(layer "F.Fab")
+			(uuid "34e78acb-2aa0-426e-b681-e53e37ff276e")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(pad "" thru_hole circle
+			(at 0 0)
+			(size 4.2 4.2)
+			(drill 2.2)
+			(layers "*.Cu" "*.Mask")
+			(remove_unused_layers no)
+			(uuid "a1194f29-0d85-49be-b884-6f03a5599d07")
+		)
+		(embedded_fonts no)
+	)
+	(footprint "ferris_sweep_ec:M2_hole_3.5mm"
+		(layer "F.Cu")
+		(uuid "7598ba76-a82e-4634-bb45-49b3dea5fb0c")
+		(at 251.569035 74.814474)
+		(descr "Mounting Hole 2.2mm, no annular, M2")
+		(tags "mounting hole 2.2mm no annular m2")
+		(property "Reference" "H15"
+			(at -0.95 -0.55 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "d99a5574-8997-4a7d-a259-9551a789f302")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Value" "MountingHole"
+			(at 0 0.55 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "48dbe43b-4b5d-4263-9a39-9a72774ded5a")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "1b9c85fc-1fcd-430f-af24-bd7a723b6a8a")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Mounting Hole without connection"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "b333e32a-9322-47c2-aa3c-fa0a70700305")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(path "/4e5c9916-a084-4278-8c29-a3ba0c30b206")
+		(sheetfile "tako.kicad_sch")
+		(attr exclude_from_pos_files)
+		(duplicate_pad_numbers_are_jumpers no)
+		(fp_text user "${REFERENCE}"
+			(at 0.3 0 0)
+			(layer "F.Fab")
+			(uuid "39aea61d-bd65-4dcb-87c9-dcec2c914542")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(pad "" thru_hole circle
+			(at 0 0)
+			(size 3.5 3.5)
+			(drill 2.2)
+			(layers "*.Cu" "*.Mask")
+			(remove_unused_layers no)
+			(uuid "b4eaea3f-d450-48a0-bd89-869640e4feaa")
+		)
+		(embedded_fonts no)
+	)
+	(footprint "ferris_sweep_ec:TRRS-PJ-320A_cutout"
+		(layer "F.Cu")
+		(uuid "804c40b0-1720-4bfb-b37c-77067acd3b99")
+		(at 266.327551 117.373366 -90)
+		(property "Reference" "J1"
+			(at 0 14.2 270)
+			(layer "Dwgs.User")
+			(uuid "a7cb1bc9-be4e-4927-8d80-2625a710ef51")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Value" "MJ-4PP-9"
+			(at 0 -5.6 270)
+			(layer "F.Fab")
+			(uuid "f7ac6155-e0f5-4312-870c-78408ff4daab")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 270)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "48b09580-fc37-49e7-bb0f-17df63071f0e")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 0 0 270)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "cb6da0e7-724e-4aa2-9055-9dd99ddfe50d")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(path "/ccc29dfe-29a0-4cf2-b967-805c23aef60a")
+		(sheetfile "tako.kicad_sch")
+		(attr through_hole)
+		(duplicate_pad_numbers_are_jumpers no)
+		(fp_line
+			(start 3.3 11.6)
+			(end 3.3 10)
+			(stroke
+				(width 0.05)
+				(type default)
+			)
+			(layer "Edge.Cuts")
+			(uuid "a70afdc5-30e6-42d2-91c1-be8e3631d408")
+		)
+		(fp_line
+			(start -3.3 11.5)
+			(end -3.3 10)
+			(stroke
+				(width 0.05)
+				(type default)
+			)
+			(layer "Edge.Cuts")
+			(uuid "7efa4572-9811-469a-9b9d-267720478992")
+		)
+		(fp_line
+			(start -1.3 10)
+			(end -1.3 11.5)
+			(stroke
+				(width 0.05)
+				(type default)
+			)
+			(layer "Edge.Cuts")
+			(uuid "2a7d435f-b8a8-45a4-96ad-76578fe92f67")
+		)
+		(fp_line
+			(start 1.3 10)
+			(end 1.3 11.6)
+			(stroke
+				(width 0.05)
+				(type default)
+			)
+			(layer "Edge.Cuts")
+			(uuid "9b270a14-4320-41a7-929a-7c16813794d0")
+		)
+		(fp_line
+			(start -3.3 6.4)
+			(end -3.3 6)
+			(stroke
+				(width 0.05)
+				(type default)
+			)
+			(layer "Edge.Cuts")
+			(uuid "4cafcd39-c791-43ba-a6f7-c10198d1c53d")
+		)
+		(fp_line
+			(start 3.3 6.4)
+			(end 3.3 6)
+			(stroke
+				(width 0.05)
+				(type default)
+			)
+			(layer "Edge.Cuts")
+			(uuid "8acb38bd-4e6b-472b-ac31-9a1f743eb441")
+		)
+		(fp_line
+			(start -1.3 6)
+			(end -1.3 6.4)
+			(stroke
+				(width 0.05)
+				(type default)
+			)
+			(layer "Edge.Cuts")
+			(uuid "9042e358-2ac1-460e-b0ea-125a25fe27e2")
+		)
+		(fp_line
+			(start 1.3 6)
+			(end 1.3 6.4)
+			(stroke
+				(width 0.05)
+				(type default)
+			)
+			(layer "Edge.Cuts")
+			(uuid "fe28c373-4894-4fc2-b622-882ae2f81803")
+		)
+		(fp_line
+			(start -3.3 3.4)
+			(end -3.3 3)
+			(stroke
+				(width 0.05)
+				(type default)
+			)
+			(layer "Edge.Cuts")
+			(uuid "b73d6d4a-6858-4dba-8dab-7790cac74b15")
+		)
+		(fp_line
+			(start 3.3 3.4)
+			(end 3.3 3)
+			(stroke
+				(width 0.05)
+				(type default)
+			)
+			(layer "Edge.Cuts")
+			(uuid "19a284b4-ea43-4136-b809-a352e2ad1d29")
+		)
+		(fp_line
+			(start -1.3 3)
+			(end -1.3 3.4)
+			(stroke
+				(width 0.05)
+				(type default)
+			)
+			(layer "Edge.Cuts")
+			(uuid "6e87bf5e-427a-4501-bd5d-c5ba3ad5b2cf")
+		)
+		(fp_line
+			(start 1.3 3)
+			(end 1.3 3.4)
+			(stroke
+				(width 0.05)
+				(type default)
+			)
+			(layer "Edge.Cuts")
+			(uuid "58ee2296-c634-4ae8-8775-a0a28a7e7261")
+		)
+		(fp_arc
+			(start 3.3 11.6)
+			(mid 2.3 12.6)
+			(end 1.3 11.6)
+			(stroke
+				(width 0.05)
+				(type default)
+			)
+			(layer "Edge.Cuts")
+			(uuid "6af8da7b-00f8-4b19-a604-8a9f431850e3")
+		)
+		(fp_arc
+			(start -1.3 11.5)
+			(mid -2.3 12.5)
+			(end -3.3 11.5)
+			(stroke
+				(width 0.05)
+				(type default)
+			)
+			(layer "Edge.Cuts")
+			(uuid "b40bd664-381f-4b36-9145-34f063140fa2")
+		)
+		(fp_arc
+			(start -3.3 10)
+			(mid -2.3 9)
+			(end -1.3 10)
+			(stroke
+				(width 0.05)
+				(type default)
+			)
+			(layer "Edge.Cuts")
+			(uuid "eed111e7-db4c-4f9b-b008-2dacbd8121d9")
+		)
+		(fp_arc
+			(start 1.3 10)
+			(mid 2.3 9)
+			(end 3.3 10)
+			(stroke
+				(width 0.05)
+				(type default)
+			)
+			(layer "Edge.Cuts")
+			(uuid "243d6880-923c-4415-9a13-fbd35fde4d65")
+		)
+		(fp_arc
+			(start -1.3 6.4)
+			(mid -2.3 7.4)
+			(end -3.3 6.4)
+			(stroke
+				(width 0.05)
+				(type default)
+			)
+			(layer "Edge.Cuts")
+			(uuid "ade0e69f-3633-4491-a218-5263de19773e")
+		)
+		(fp_arc
+			(start 3.3 6.4)
+			(mid 2.3 7.4)
+			(end 1.3 6.4)
+			(stroke
+				(width 0.05)
+				(type default)
+			)
+			(layer "Edge.Cuts")
+			(uuid "195ba6c5-dc7f-4bda-9329-47b1961d4891")
+		)
+		(fp_arc
+			(start -3.3 6)
+			(mid -2.3 5)
+			(end -1.3 6)
+			(stroke
+				(width 0.05)
+				(type default)
+			)
+			(layer "Edge.Cuts")
+			(uuid "7f8394f4-b09f-4464-aeed-bc1bc016a8e8")
+		)
+		(fp_arc
+			(start 1.3 6)
+			(mid 2.3 5)
+			(end 3.3 6)
+			(stroke
+				(width 0.05)
+				(type default)
+			)
+			(layer "Edge.Cuts")
+			(uuid "3eb42008-7fa4-428d-866f-cc0f525dc35f")
+		)
+		(fp_arc
+			(start -1.3 3.4)
+			(mid -2.3 4.4)
+			(end -3.3 3.4)
+			(stroke
+				(width 0.05)
+				(type default)
+			)
+			(layer "Edge.Cuts")
+			(uuid "3510db4d-8a31-427d-a1b1-b92da86ff56f")
+		)
+		(fp_arc
+			(start 3.3 3.4)
+			(mid 2.3 4.4)
+			(end 1.3 3.4)
+			(stroke
+				(width 0.05)
+				(type default)
+			)
+			(layer "Edge.Cuts")
+			(uuid "f3eee012-1a01-47cb-afe6-af654107702f")
+		)
+		(fp_arc
+			(start -3.3 3)
+			(mid -2.3 2)
+			(end -1.3 3)
+			(stroke
+				(width 0.05)
+				(type default)
+			)
+			(layer "Edge.Cuts")
+			(uuid "adabc124-0fa2-4c3a-98f5-04cf28562da7")
+		)
+		(fp_arc
+			(start 1.3 3)
+			(mid 2.3 2)
+			(end 3.3 3)
+			(stroke
+				(width 0.05)
+				(type default)
+			)
+			(layer "Edge.Cuts")
+			(uuid "a99fdc3b-fbf7-4c65-9f08-c069b622daf1")
+		)
+		(fp_text user "Sleeve"
+			(at -0.25 11.4 270)
+			(layer "B.Fab")
+			(uuid "cfa8dbbf-b09a-48e7-bd08-e6230339c0de")
+			(effects
+				(font
+					(size 0.7 0.7)
+					(thickness 0.1)
+				)
+				(justify mirror)
+			)
+		)
+		(fp_text user "Tip"
+			(at 0 10 270)
+			(layer "B.Fab")
+			(uuid "745dc100-56d9-42d8-a24c-4f8065a7008e")
+			(effects
+				(font
+					(size 0.7 0.7)
+					(thickness 0.1)
+				)
+				(justify mirror)
+			)
+		)
+		(fp_text user "Ring1"
+			(at 0 6.25 270)
+			(layer "B.Fab")
+			(uuid "d3e88a95-2fc1-4793-8125-72c80b8f9209")
+			(effects
+				(font
+					(size 0.7 0.7)
+					(thickness 0.1)
+				)
+				(justify mirror)
+			)
+		)
+		(fp_text user "Ring2"
+			(at 0 3.25 270)
+			(layer "B.Fab")
+			(uuid "0bba00d3-e507-4b5f-9e95-f25bc375a8ac")
+			(effects
+				(font
+					(size 0.7 0.7)
+					(thickness 0.1)
+				)
+				(justify mirror)
+			)
+		)
+		(fp_text user "Sleeve"
+			(at 0.25 11.4 270)
+			(layer "F.Fab")
+			(uuid "cc67794d-b80c-4693-8b00-f29dfb20aa86")
+			(effects
+				(font
+					(size 0.7 0.7)
+					(thickness 0.1)
+				)
+			)
+		)
+		(fp_text user "Tip"
+			(at 0 10 270)
+			(layer "F.Fab")
+			(uuid "16f21a72-7a94-402c-9082-31187a26b686")
+			(effects
+				(font
+					(size 0.7 0.7)
+					(thickness 0.1)
+				)
+			)
+		)
+		(fp_text user "Ring1"
+			(at 0 6.25 270)
+			(layer "F.Fab")
+			(uuid "0cafc374-191a-4d91-a7fd-3256dd28866f")
+			(effects
+				(font
+					(size 0.7 0.7)
+					(thickness 0.1)
+				)
+			)
+		)
+		(fp_text user "Ring2"
+			(at 0 3.25 270)
+			(layer "F.Fab")
+			(uuid "796ae797-f690-4000-a4d8-45b1d49178ec")
+			(effects
+				(font
+					(size 0.7 0.7)
+					(thickness 0.1)
+				)
+			)
+		)
+		(embedded_fonts no)
+		(model "../tako.3dshapes/PJ-320A.step"
+			(offset
+				(xyz 0 0 0)
+			)
+			(scale
+				(xyz 1 1 1)
+			)
+			(rotate
+				(xyz -90 0 180)
+			)
+		)
+	)
+	(footprint "ferris_sweep_ec:M2_hole_3.5mm"
+		(layer "F.Cu")
+		(uuid "80a4215a-0b50-4ffb-8cb0-d66f96549d3d")
+		(at 251.569036 117.373366)
+		(descr "Mounting Hole 2.2mm, no annular, M2")
+		(tags "mounting hole 2.2mm no annular m2")
+		(property "Reference" "H17"
+			(at -0.95 -0.55 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "489e58c8-3e54-434f-bbc8-6b401064ea25")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Value" "MountingHole"
+			(at 0 0.55 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "4b611ac2-affa-412e-b9ac-eda2017080c7")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "9ca9061b-6f4f-48d7-9ed3-e2442e06fd11")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Mounting Hole without connection"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "c6c6c12d-29c9-4dd6-8e02-bb5419d07083")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(sheetfile "tako.kicad_sch")
+		(attr through_hole exclude_from_pos_files)
+		(duplicate_pad_numbers_are_jumpers no)
+		(fp_text user "${REFERENCE}"
+			(at 0.3 0 0)
+			(layer "F.Fab")
+			(uuid "245ad975-7a64-4f7f-b3bb-78f7be68430a")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(pad "" thru_hole circle
+			(at 0 0)
+			(size 3.5 3.5)
+			(drill 2.2)
+			(layers "*.Cu" "*.Mask")
+			(remove_unused_layers no)
+			(uuid "baceff09-2173-4be5-b53e-39c73c3921c3")
+		)
+		(embedded_fonts no)
+	)
+	(footprint "ferris_sweep_ec:M2_hole_4.2mm"
+		(layer "F.Cu")
+		(uuid "875da25f-709b-4b5a-88e7-ade1015aadde")
+		(at 258.393583 123.632934 -22.5)
+		(descr "Mounting Hole 2.2mm, no annular, M2")
+		(tags "mounting hole 2.2mm no annular m2")
+		(property "Reference" "H14"
+			(at -0.95 -0.55 157.5)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "bd53ea72-7934-462a-a25b-f11e33a0018f")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Value" "MountingHole"
+			(at 0 0.55 157.5)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "121e5c6a-e694-4f9c-9cf1-cbfeba27f62f")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 337.5)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "2d7e525c-1230-40b6-939b-4b652d8ab47a")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Mounting Hole without connection"
+			(at 0 0 337.5)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "caac8492-161f-410c-a7bd-ece754380ae8")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(path "/a51305ab-4c9f-467e-ba91-481e21059071")
+		(sheetfile "tako.kicad_sch")
+		(attr through_hole exclude_from_pos_files exclude_from_bom)
+		(duplicate_pad_numbers_are_jumpers no)
+		(fp_text user "${REFERENCE}"
+			(at 0.3 0 157.5)
+			(layer "F.Fab")
+			(uuid "1a91aa0a-c3a2-44f0-af69-6fe415275311")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(pad "" thru_hole circle
+			(at 0 0 337.5)
+			(size 4.2 4.2)
+			(drill 2.2)
+			(layers "*.Cu" "*.Mask")
+			(remove_unused_layers no)
+			(uuid "0457fe9a-d830-45ae-865e-4d3cb7410b55")
+		)
+		(embedded_fonts no)
+	)
+	(footprint "ferris_sweep_ec:M2_hole_4.2mm"
+		(layer "F.Cu")
+		(uuid "a2a0ab75-4388-4c47-bc13-17e97667f060")
+		(at 240.044582 94.768938)
+		(descr "Mounting Hole 2.2mm, no annular, M2")
+		(tags "mounting hole 2.2mm no annular m2")
+		(property "Reference" "H12"
+			(at -0.95 -0.55 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "cc23503b-ff33-4643-b76f-7a9a406b5fd7")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Value" "MountingHole"
+			(at 0 0.55 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "072ad3ee-736f-4291-84c3-6fded493fda4")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "7f14172c-2f61-42be-9cfa-ab35281fb71a")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Mounting Hole without connection"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "68c03ab0-2dd3-4575-8d0c-cf4743d77df0")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(path "/4514d971-0467-4941-a584-40690889398d")
+		(sheetfile "tako.kicad_sch")
+		(attr exclude_from_pos_files exclude_from_bom)
+		(duplicate_pad_numbers_are_jumpers no)
+		(fp_text user "${REFERENCE}"
+			(at 0.3 0 0)
+			(layer "F.Fab")
+			(uuid "5a0291c8-0303-4f4b-afaa-a7473943502e")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(pad "" thru_hole circle
+			(at 0 0)
+			(size 4.2 4.2)
+			(drill 2.2)
+			(layers "*.Cu" "*.Mask")
+			(remove_unused_layers no)
+			(uuid "d7d32b96-9cba-4ef7-8d17-c853a3c04905")
+		)
+		(embedded_fonts no)
+	)
+	(footprint "ferris_sweep_ec:M2_hole_4.2mm"
+		(layer "F.Cu")
+		(uuid "a523607c-975c-41f7-9a6e-eccd478f19b0")
+		(at 201.944578 66.718938)
+		(descr "Mounting Hole 2.2mm, no annular, M2")
+		(tags "mounting hole 2.2mm no annular m2")
+		(property "Reference" "H6"
+			(at -0.95 -0.55 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "aed10845-eaef-4637-81c4-94d36aa33e10")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Value" "MountingHole"
+			(at 0 0.55 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "629a5dd9-fcf4-48b3-9710-6c7324039919")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "3fdc55df-ceca-436e-baeb-5f9bd15b5b7f")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Mounting Hole without connection"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "c99d1fd2-df54-4a7f-b18f-698248e16a82")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(path "/89a32438-49cc-40b4-9cab-a5ebff636ef8")
+		(sheetfile "tako.kicad_sch")
+		(attr exclude_from_pos_files exclude_from_bom)
+		(duplicate_pad_numbers_are_jumpers no)
+		(fp_text user "${REFERENCE}"
+			(at 0.3 0 0)
+			(layer "F.Fab")
+			(uuid "821f40af-40e7-415e-b454-259a24ae7281")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(pad "" thru_hole circle
+			(at 0 0)
+			(size 4.2 4.2)
+			(drill 2.2)
+			(layers "*.Cu" "*.Mask")
+			(remove_unused_layers no)
+			(uuid "3d190ef8-df6d-4970-9737-e99f973cdf5c")
+		)
+		(embedded_fonts no)
+	)
+	(footprint "ferris_sweep_ec:M2_hole_4.2mm"
+		(layer "F.Cu")
+		(uuid "c134df15-e243-4e8e-a5d5-5dcc283ddaba")
+		(at 182.894581 53)
+		(descr "Mounting Hole 2.2mm, no annular, M2")
+		(tags "mounting hole 2.2mm no annular m2")
+		(property "Reference" "H4"
+			(at -0.95 -0.55 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "7d6efd32-9f24-43c6-881b-be9f29477b3d")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Value" "MountingHole"
+			(at 0 0.55 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "bf41701f-c2d3-4e68-b36c-604167d4fe7e")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "d9d4a6cf-7fe0-4e05-80fa-396ef203a681")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Mounting Hole without connection"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "ef10b6db-f4d6-482f-a5ac-c5569580327c")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(path "/810a31c0-d7b3-470e-91c5-f937dcfe4d2a")
+		(sheetfile "tako.kicad_sch")
+		(attr exclude_from_pos_files exclude_from_bom)
+		(duplicate_pad_numbers_are_jumpers no)
+		(fp_text user "${REFERENCE}"
+			(at 0.3 0 0)
+			(layer "F.Fab")
+			(uuid "c130bf14-fa4f-4fef-ab96-3f3cda5a0273")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(pad "" thru_hole circle
+			(at 0 0)
+			(size 4.2 4.2)
+			(drill 2.2)
+			(layers "*.Cu" "*.Mask")
+			(remove_unused_layers no)
+			(uuid "0c68ca3d-0323-45d2-b2bf-8d8c1d3c2cab")
+		)
+		(embedded_fonts no)
+	)
+	(footprint "ferris_sweep_ec:M2_hole_4.2mm"
+		(layer "F.Cu")
+		(uuid "c4edfe4f-f580-4b34-8372-94e7bcda33e2")
+		(at 240.044585 75.718938)
+		(descr "Mounting Hole 2.2mm, no annular, M2")
+		(tags "mounting hole 2.2mm no annular m2")
+		(property "Reference" "H11"
+			(at -0.95 -0.55 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "8c76ec58-b5c6-4451-9aa7-88deb50e6f1c")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Value" "MountingHole"
+			(at 0 0.55 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "0c040bf8-77e7-4e65-b165-f9d046098e2b")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "fffe0b35-4c16-4e6f-b473-4f0f0c27b36e")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Mounting Hole without connection"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "445643fc-da4a-4fee-8493-14cd3c2f4f0e")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(path "/73a21761-04f8-48ce-bf65-343396b7e40c")
+		(sheetfile "tako.kicad_sch")
+		(attr exclude_from_pos_files exclude_from_bom)
+		(duplicate_pad_numbers_are_jumpers no)
+		(fp_text user "${REFERENCE}"
+			(at 0.3 0 0)
+			(layer "F.Fab")
+			(uuid "5e85c3b6-b2ed-4b78-a7a9-b04a0adde73b")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(pad "" thru_hole circle
+			(at 0 0)
+			(size 4.2 4.2)
+			(drill 2.2)
+			(layers "*.Cu" "*.Mask")
+			(remove_unused_layers no)
+			(uuid "ddf26cc5-dbc8-4f8a-a747-bfe8695498e1")
+		)
+		(embedded_fonts no)
+	)
+	(footprint "ferris_sweep_ec:nice_view_cutout"
+		(layer "F.Cu")
+		(uuid "c70ed51e-0bf5-4f27-a332-21e180c94934")
+		(at 258.959365 96.186577)
+		(property "Reference" "DISP1"
+			(at 0 1.27 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(uuid "24f16234-5791-4018-b942-5011870fe809")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Value" "nice!view"
+			(at 0 18.975 0)
+			(unlocked yes)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "5a65af3d-9d42-436d-bab7-d4e06c541362")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "11ac3b43-1190-4a2b-b300-7ee5182f1d5e")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Sharp LS011B7DH03 Memory in Pixel 160x68"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "65184409-616d-4847-8be5-433fe346167b")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Field4" "${REFERENCE}"
+			(at 0 4 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "68e3a821-7a93-4949-932a-ffeca73c0c4c")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(path "/6241d340-34ef-4ae8-92b8-dff7daeb4ec3")
+		(sheetfile "tako.kicad_sch")
+		(attr through_hole)
+		(duplicate_pad_numbers_are_jumpers no)
+		(fp_circle
+			(center -5.08 16.48)
+			(end -4.055 16.48)
+			(stroke
+				(width 0.05)
+				(type default)
+			)
+			(fill no)
+			(layer "Edge.Cuts")
+			(uuid "a02b7d79-3350-4662-bf76-3ec9f010c1fc")
+		)
+		(fp_circle
+			(center -2.54 16.48)
+			(end -1.515 16.48)
+			(stroke
+				(width 0.05)
+				(type default)
+			)
+			(fill no)
+			(layer "Edge.Cuts")
+			(uuid "9c7c49a3-252d-423d-a4e7-ba4655d7e38a")
+		)
+		(fp_circle
+			(center 0 16.48)
+			(end 1.025 16.48)
+			(stroke
+				(width 0.05)
+				(type default)
+			)
+			(fill no)
+			(layer "Edge.Cuts")
+			(uuid "3aa79b6b-64ee-439e-aa6c-2d1fe75ec59f")
+		)
+		(fp_circle
+			(center 2.54 16.48)
+			(end 3.565 16.48)
+			(stroke
+				(width 0.05)
+				(type default)
+			)
+			(fill no)
+			(layer "Edge.Cuts")
+			(uuid "933ee10c-8928-45aa-a323-8169f773e393")
+		)
+		(fp_circle
+			(center 5.08 16.48)
+			(end 6.105 16.48)
+			(stroke
+				(width 0.05)
+				(type default)
+			)
+			(fill no)
+			(layer "Edge.Cuts")
+			(uuid "61bbe039-a4ed-4518-bb71-9ad029e525c2")
+		)
+		(embedded_fonts no)
+		(model "${KICAD7_3DMODEL_DIR}/Connector_PinHeader_2.54mm.3dshapes/PinHeader_1x05_P2.54mm_Vertical.wrl"
+			(offset
+				(xyz 5.1 -16.5 0)
+			)
+			(scale
+				(xyz 1 1 1)
+			)
+			(rotate
+				(xyz 0 0 90)
+			)
+		)
+	)
+	(footprint "ferris_sweep_ec:M2_hole_3.5mm"
+		(layer "F.Cu")
+		(uuid "d27756ba-20ad-4a51-9100-5fcca1e0723b")
+		(at 266.35036 74.81402)
+		(descr "Mounting Hole 2.2mm, no annular, M2")
+		(tags "mounting hole 2.2mm no annular m2")
+		(property "Reference" "H16"
+			(at -0.95 -0.55 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "7b6b913c-0cc8-4893-8cc1-b77eceda12f8")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Value" "MountingHole"
+			(at 0 0.55 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "a4aed28c-b3c3-44e0-9624-5ebab5167f5a")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "913b3db3-3e75-4762-95a0-f1940a19fb1a")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Mounting Hole without connection"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "a32f5191-4050-4a91-a253-4a6b373f8c35")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(path "/f51c65de-30d2-4d6b-9d1b-d065c03eec74")
+		(sheetfile "tako.kicad_sch")
+		(attr exclude_from_pos_files)
+		(duplicate_pad_numbers_are_jumpers no)
+		(fp_text user "${REFERENCE}"
+			(at 0.3 0 0)
+			(layer "F.Fab")
+			(uuid "89ba4cf5-bc2a-4eaa-a7e0-6ae144574618")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(pad "" thru_hole circle
+			(at 0 0)
+			(size 3.5 3.5)
+			(drill 2.2)
+			(layers "*.Cu" "*.Mask")
+			(remove_unused_layers no)
+			(uuid "0f8cf71e-0b2f-442c-ba74-18fb28966da1")
+		)
+		(embedded_fonts no)
+	)
+	(footprint "ferris_sweep_ec:M2_hole_4.2mm"
+		(layer "F.Cu")
+		(uuid "d4d33f26-e7f2-420e-87a4-331400df03f0")
+		(at 201.944578 85.768938)
+		(descr "Mounting Hole 2.2mm, no annular, M2")
+		(tags "mounting hole 2.2mm no annular m2")
+		(property "Reference" "H7"
+			(at -0.95 -0.55 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "c04a8e9b-7365-4626-8592-418c8eb583a1")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Value" "MountingHole"
+			(at 0 0.55 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "9ea11aff-45a4-4427-84bc-a65e83570b1d")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "c52234cc-f376-44e7-a227-11a80ae9cc7d")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Mounting Hole without connection"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "dc6c2db1-3024-4495-a424-77da885cc474")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(path "/e3bb5e18-907f-478a-99f6-cf6b14ffbb89")
+		(sheetfile "tako.kicad_sch")
+		(attr exclude_from_pos_files exclude_from_bom)
+		(duplicate_pad_numbers_are_jumpers no)
+		(fp_text user "${REFERENCE}"
+			(at 0.3 0 0)
+			(layer "F.Fab")
+			(uuid "a47e0442-7194-4fdc-8fbf-609a9f37bf28")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(pad "" thru_hole circle
+			(at 0 0)
+			(size 4.2 4.2)
+			(drill 2.2)
+			(layers "*.Cu" "*.Mask")
+			(remove_unused_layers no)
+			(uuid "096fdb70-41c1-47f8-ae7c-ea6ccbde12d5")
+		)
+		(embedded_fonts no)
+	)
+	(footprint "ferris_sweep_ec:M2_hole_4.2mm"
+		(layer "F.Cu")
+		(uuid "ed7eb1a4-d692-4dfd-9469-41f37fa846d4")
+		(at 163.844586 103.769432)
+		(descr "Mounting Hole 2.2mm, no annular, M2")
+		(tags "mounting hole 2.2mm no annular m2")
+		(property "Reference" "H3"
+			(at -0.95 -0.55 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "49d02217-84aa-4546-83dd-3f624dfd5c80")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Value" "MountingHole"
+			(at 0 0.55 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "7614f1b6-4766-40aa-9e9f-8a809ac51fec")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "20b0dbbe-cd20-4941-a4d0-8cc9ec2abc4c")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Mounting Hole without connection"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "8b53fbb0-028b-4963-9fce-ec96bf1bdae0")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(path "/b69508e1-8935-4e12-9219-5bff63691ced")
+		(sheetfile "tako.kicad_sch")
+		(attr exclude_from_pos_files exclude_from_bom)
+		(duplicate_pad_numbers_are_jumpers no)
+		(fp_text user "${REFERENCE}"
+			(at 0.3 0 0)
+			(layer "F.Fab")
+			(uuid "10f72ee7-72ae-491a-b1e3-cba4ba05c5da")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(pad "" thru_hole circle
+			(at 0 0)
+			(size 4.2 4.2)
+			(drill 2.2)
+			(layers "*.Cu" "*.Mask")
+			(remove_unused_layers no)
+			(uuid "7608f185-2b30-4e6b-a873-137d3107affb")
+		)
+		(embedded_fonts no)
+	)
+	(footprint "ferris_sweep_ec:M2_hole_4.2mm"
+		(layer "F.Cu")
+		(uuid "f552dd2f-32ff-4388-8f75-0ae17b5493df")
+		(at 201.944584 107.293935)
+		(descr "Mounting Hole 2.2mm, no annular, M2")
+		(tags "mounting hole 2.2mm no annular m2")
+		(property "Reference" "H8"
+			(at -0.95 -0.55 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "f36bacf6-712b-4a53-ad92-83140b6b6989")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Value" "MountingHole"
+			(at 0 0.55 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "3a6873b6-53dd-49e6-9d4d-21b61e469362")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "7684a914-c6aa-420c-bef2-301bf2c2d932")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Mounting Hole without connection"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "a68dc200-b9c1-4cce-8007-3aa04ce94a79")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(path "/70b6fa50-df12-4c2e-9d9f-9b8d1265c566")
+		(sheetfile "tako.kicad_sch")
+		(attr through_hole exclude_from_pos_files exclude_from_bom)
+		(duplicate_pad_numbers_are_jumpers no)
+		(fp_text user "${REFERENCE}"
+			(at 0.3 0 0)
+			(layer "F.Fab")
+			(uuid "3b577550-1236-4179-9d78-9642c1422637")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(pad "" thru_hole circle
+			(at 0 0)
+			(size 4.2 4.2)
+			(drill 2.2)
+			(layers "*.Cu" "*.Mask")
+			(remove_unused_layers no)
+			(uuid "cc19e5a2-e3c9-47d0-bfed-6775d386f0bb")
+		)
+		(embedded_fonts no)
+	)
+	(footprint "ferris_sweep_ec:ArduinoProMicro_cutout"
+		(layer "B.Cu")
+		(uuid "92bc01a6-4972-4c2a-bae3-742e2d151b44")
+		(at 258.959612 94.677603 -90)
+		(property "Reference" "U1"
+			(at 0 -1.625 90)
+			(layer "B.SilkS")
+			(hide yes)
+			(uuid "6d589411-d299-4284-bc39-5c41e15a91e3")
+			(effects
+				(font
+					(size 1.27 1.524)
+					(thickness 0.2032)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Value" "STeMCell"
+			(at 0 0 90)
+			(layer "B.SilkS")
+			(hide yes)
+			(uuid "ea26e400-abea-4257-b1d3-a44f0b3cea32")
+			(effects
+				(font
+					(size 1.27 1.524)
+					(thickness 0.2032)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 270)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "be8d90f6-2cee-41a3-8304-24f956f4b451")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 0 0 270)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "e877b365-a652-4b6a-a8f4-452b5200c462")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(path "/a54253ed-7d6a-48fd-91d2-6db0b5255a3e")
+		(sheetfile "tako.kicad_sch")
+		(attr through_hole)
+		(duplicate_pad_numbers_are_jumpers no)
+		(fp_line
+			(start -14.77 8.62)
+			(end -13.17 8.62)
+			(stroke
+				(width 0.05)
+				(type default)
+			)
+			(layer "Edge.Cuts")
+			(uuid "c107f035-21c8-4b87-a91e-6041d5b3b32f")
+		)
+		(fp_line
+			(start -12.97 8.42)
+			(end -12.97 6.82)
+			(stroke
+				(width 0.05)
+				(type default)
+			)
+			(layer "Edge.Cuts")
+			(uuid "26a44268-7371-4475-a7f2-398c74941a78")
+		)
+		(fp_line
+			(start -14.97 6.82)
+			(end -14.97 8.42)
+			(stroke
+				(width 0.05)
+				(type default)
+			)
+			(layer "Edge.Cuts")
+			(uuid "915a96ad-752a-4a50-901e-a3b5e5962fb7")
+		)
+		(fp_line
+			(start -13.17 6.62)
+			(end -14.77 6.62)
+			(stroke
+				(width 0.05)
+				(type default)
+			)
+			(layer "Edge.Cuts")
+			(uuid "ea858402-9bd9-4edb-b655-e3bb493103cc")
+		)
+		(fp_line
+			(start -14.77 -6.62)
+			(end -13.17 -6.62)
+			(stroke
+				(width 0.05)
+				(type default)
+			)
+			(layer "Edge.Cuts")
+			(uuid "6712f91e-af5f-4799-903e-b5702e87e821")
+		)
+		(fp_line
+			(start -12.97 -6.82)
+			(end -12.97 -8.42)
+			(stroke
+				(width 0.05)
+				(type default)
+			)
+			(layer "Edge.Cuts")
+			(uuid "ad0cd63e-6477-4a2f-890c-82ae16989fc2")
+		)
+		(fp_line
+			(start -14.97 -8.42)
+			(end -14.97 -6.82)
+			(stroke
+				(width 0.05)
+				(type default)
+			)
+			(layer "Edge.Cuts")
+			(uuid "48636354-6b17-43fe-8f09-6ab8be6d3bbf")
+		)
+		(fp_line
+			(start -13.17 -8.62)
+			(end -14.77 -8.62)
+			(stroke
+				(width 0.05)
+				(type default)
+			)
+			(layer "Edge.Cuts")
+			(uuid "10561152-60d3-47bb-9a49-278d5d8ef00f")
+		)
+		(fp_arc
+			(start -14.77 8.62)
+			(mid -14.911421 8.561421)
+			(end -14.97 8.42)
+			(stroke
+				(width 0.05)
+				(type default)
+			)
+			(layer "Edge.Cuts")
+			(uuid "c8bf9fa4-ddf4-40f7-b9f2-f7dc706b4b7c")
+		)
+		(fp_arc
+			(start -12.97 8.42)
+			(mid -13.028579 8.561421)
+			(end -13.17 8.62)
+			(stroke
+				(width 0.05)
+				(type default)
+			)
+			(layer "Edge.Cuts")
+			(uuid "215adbd1-fe81-46b6-a448-3518cb240b2e")
+		)
+		(fp_arc
+			(start -14.97 6.82)
+			(mid -14.911421 6.678579)
+			(end -14.77 6.62)
+			(stroke
+				(width 0.05)
+				(type default)
+			)
+			(layer "Edge.Cuts")
+			(uuid "f759998c-05ee-4f97-9a4d-ef8c91495615")
+		)
+		(fp_arc
+			(start -13.17 6.62)
+			(mid -13.028579 6.678579)
+			(end -12.97 6.82)
+			(stroke
+				(width 0.05)
+				(type default)
+			)
+			(layer "Edge.Cuts")
+			(uuid "75b7fd81-7eb5-480a-ab0d-72ab23977f9e")
+		)
+		(fp_arc
+			(start -14.77 -6.62)
+			(mid -14.911421 -6.678579)
+			(end -14.97 -6.82)
+			(stroke
+				(width 0.05)
+				(type default)
+			)
+			(layer "Edge.Cuts")
+			(uuid "93b1eb10-003e-4563-9145-25ed45282853")
+		)
+		(fp_arc
+			(start -12.97 -6.82)
+			(mid -13.028579 -6.678579)
+			(end -13.17 -6.62)
+			(stroke
+				(width 0.05)
+				(type default)
+			)
+			(layer "Edge.Cuts")
+			(uuid "af639e5f-882c-4b18-b368-6cd3d6d16f41")
+		)
+		(fp_arc
+			(start -14.97 -8.42)
+			(mid -14.911421 -8.561421)
+			(end -14.77 -8.62)
+			(stroke
+				(width 0.05)
+				(type default)
+			)
+			(layer "Edge.Cuts")
+			(uuid "47cff8d6-aaea-44d3-b133-734e28b680ec")
+		)
+		(fp_arc
+			(start -13.17 -8.62)
+			(mid -13.028579 -8.561421)
+			(end -12.97 -8.42)
+			(stroke
+				(width 0.05)
+				(type default)
+			)
+			(layer "Edge.Cuts")
+			(uuid "660934c7-f615-466b-9228-1510dea740a7")
+		)
+		(fp_circle
+			(center -11.43 7.62)
+			(end -10.405 7.62)
+			(stroke
+				(width 0.05)
+				(type default)
+			)
+			(fill no)
+			(layer "Edge.Cuts")
+			(uuid "054ebc80-bcd9-45a5-bdf6-42fb31ae03dd")
+		)
+		(fp_circle
+			(center -8.89 7.62)
+			(end -7.865 7.62)
+			(stroke
+				(width 0.05)
+				(type default)
+			)
+			(fill no)
+			(layer "Edge.Cuts")
+			(uuid "c1bb1d84-2cd5-4a2a-9483-8f3e5784fccc")
+		)
+		(fp_circle
+			(center -6.35 7.62)
+			(end -5.325 7.62)
+			(stroke
+				(width 0.05)
+				(type default)
+			)
+			(fill no)
+			(layer "Edge.Cuts")
+			(uuid "50abd4b8-a1a1-4c36-92e9-37957d035344")
+		)
+		(fp_circle
+			(center -3.81 7.62)
+			(end -2.785 7.62)
+			(stroke
+				(width 0.05)
+				(type default)
+			)
+			(fill no)
+			(layer "Edge.Cuts")
+			(uuid "331e9fcf-c3f7-46e6-ac3f-025ccb3d8bd7")
+		)
+		(fp_circle
+			(center -1.27 7.62)
+			(end -0.245 7.62)
+			(stroke
+				(width 0.05)
+				(type default)
+			)
+			(fill no)
+			(layer "Edge.Cuts")
+			(uuid "3689783b-e50f-460a-8041-0be63f89f18c")
+		)
+		(fp_circle
+			(center 1.27 7.62)
+			(end 2.295 7.62)
+			(stroke
+				(width 0.05)
+				(type default)
+			)
+			(fill no)
+			(layer "Edge.Cuts")
+			(uuid "15ce802e-0cb3-4bbd-bcaf-33e2c5c06e63")
+		)
+		(fp_circle
+			(center 3.81 7.62)
+			(end 4.835 7.62)
+			(stroke
+				(width 0.05)
+				(type default)
+			)
+			(fill no)
+			(layer "Edge.Cuts")
+			(uuid "694cf69d-f42f-4c10-b13a-9868056dd4a6")
+		)
+		(fp_circle
+			(center 6.35 7.62)
+			(end 7.375 7.62)
+			(stroke
+				(width 0.05)
+				(type default)
+			)
+			(fill no)
+			(layer "Edge.Cuts")
+			(uuid "846d0e3f-8c0f-4742-b71f-b3fb3009e3b0")
+		)
+		(fp_circle
+			(center 8.89 7.62)
+			(end 9.915 7.62)
+			(stroke
+				(width 0.05)
+				(type default)
+			)
+			(fill no)
+			(layer "Edge.Cuts")
+			(uuid "0106d09f-a882-47b4-a4cd-cfd0f685af61")
+		)
+		(fp_circle
+			(center 11.43 7.62)
+			(end 12.455 7.62)
+			(stroke
+				(width 0.05)
+				(type default)
+			)
+			(fill no)
+			(layer "Edge.Cuts")
+			(uuid "d25faf4b-7521-4953-8817-89f5a2be7810")
+		)
+		(fp_circle
+			(center 13.97 7.62)
+			(end 14.995 7.62)
+			(stroke
+				(width 0.05)
+				(type default)
+			)
+			(fill no)
+			(layer "Edge.Cuts")
+			(uuid "cd3bd2a3-c6f5-451f-83a3-399327c821c8")
+		)
+		(fp_circle
+			(center -11.43 -7.62)
+			(end -10.405 -7.62)
+			(stroke
+				(width 0.05)
+				(type default)
+			)
+			(fill no)
+			(layer "Edge.Cuts")
+			(uuid "f5b1a6f3-598d-4faf-8f52-52aacd9f1397")
+		)
+		(fp_circle
+			(center -8.89 -7.62)
+			(end -7.865 -7.62)
+			(stroke
+				(width 0.05)
+				(type default)
+			)
+			(fill no)
+			(layer "Edge.Cuts")
+			(uuid "c514ac41-bc21-426b-ab1a-9270ba8a9e3e")
+		)
+		(fp_circle
+			(center -6.35 -7.62)
+			(end -5.325 -7.62)
+			(stroke
+				(width 0.05)
+				(type default)
+			)
+			(fill no)
+			(layer "Edge.Cuts")
+			(uuid "e2705ffa-8ce7-46d7-9558-e5fec703fc9d")
+		)
+		(fp_circle
+			(center -3.81 -7.62)
+			(end -2.785 -7.62)
+			(stroke
+				(width 0.05)
+				(type default)
+			)
+			(fill no)
+			(layer "Edge.Cuts")
+			(uuid "f2364bea-1370-4525-9208-9a7592b62d60")
+		)
+		(fp_circle
+			(center -1.27 -7.62)
+			(end -0.245 -7.62)
+			(stroke
+				(width 0.05)
+				(type default)
+			)
+			(fill no)
+			(layer "Edge.Cuts")
+			(uuid "1d16017e-7c16-4d0a-80ef-15567c986b0b")
+		)
+		(fp_circle
+			(center 1.27 -7.62)
+			(end 2.295 -7.62)
+			(stroke
+				(width 0.05)
+				(type default)
+			)
+			(fill no)
+			(layer "Edge.Cuts")
+			(uuid "86f7df21-125d-444a-a279-a5a0cc5dd78b")
+		)
+		(fp_circle
+			(center 3.81 -7.62)
+			(end 4.835 -7.62)
+			(stroke
+				(width 0.05)
+				(type default)
+			)
+			(fill no)
+			(layer "Edge.Cuts")
+			(uuid "5764c736-d78d-4694-ba61-f44d83022401")
+		)
+		(fp_circle
+			(center 6.35 -7.62)
+			(end 7.375 -7.62)
+			(stroke
+				(width 0.05)
+				(type default)
+			)
+			(fill no)
+			(layer "Edge.Cuts")
+			(uuid "9c98857d-fcd3-44b0-b422-e9b256493df5")
+		)
+		(fp_circle
+			(center 8.89 -7.62)
+			(end 9.915 -7.62)
+			(stroke
+				(width 0.05)
+				(type default)
+			)
+			(fill no)
+			(layer "Edge.Cuts")
+			(uuid "e81da9b5-0df4-4202-ac10-cf842131f64d")
+		)
+		(fp_circle
+			(center 11.43 -7.62)
+			(end 12.455 -7.62)
+			(stroke
+				(width 0.05)
+				(type default)
+			)
+			(fill no)
+			(layer "Edge.Cuts")
+			(uuid "d47ad416-da2e-4761-ba7c-22312f329514")
+		)
+		(fp_circle
+			(center 13.97 -7.62)
+			(end 14.995 -7.62)
+			(stroke
+				(width 0.05)
+				(type default)
+			)
+			(fill no)
+			(layer "Edge.Cuts")
+			(uuid "5ee9a141-d1ca-4cce-9e74-99ccb424717b")
+		)
+		(embedded_fonts no)
+	)
+	(gr_arc
+		(start 249.568844 74.814284)
+		(mid 250.154737 73.400105)
+		(end 251.568981 72.814298)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "Eco1.User")
+		(uuid "77b8c816-6a59-4313-8b62-a5f8e54de523")
+	)
+	(gr_line
+		(start 249.569037 72.314471)
+		(end 249.568752 119.626203)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "Eco1.User")
+		(uuid "b4c7a12d-796e-4df5-93c1-8d7419e10e1a")
+	)
+	(gr_arc
+		(start 251.568756 121.536202)
+		(mid 250.154492 120.950452)
+		(end 249.568756 119.536203)
+		(stroke
+			(width 0.05)
+			(type default)
+		)
+		(layer "Eco1.User")
+		(uuid "5b2132d3-4c84-43c9-99c6-bc5194de8cfa")
+	)
+	(gr_line
+		(start 251.568756 121.536202)
+		(end 264.772074 121.536202)
+		(stroke
+			(width 0.05)
+			(type default)
+		)
+		(layer "Eco1.User")
+		(uuid "93bdac69-903f-4d44-aa75-df2b232a3bbb")
+	)
+	(gr_line
+		(start 251.568981 72.814298)
+		(end 266.350307 72.813846)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "Eco1.User")
+		(uuid "b6ad8d5a-2f62-4b69-b513-f58cd1477c33")
+	)
+	(gr_line
+		(start 264.567699 125.448656)
+		(end 265.827699 123.266272)
+		(stroke
+			(width 0.05)
+			(type default)
+		)
+		(layer "Eco1.User")
+		(uuid "aff15d72-90c2-4ed3-a06e-324b4619bff8")
+	)
+	(gr_curve
+		(pts
+			(xy 264.772074 121.536202) (xy 266.172075 121.539384) (xy 266.172075 122.539384) (xy 265.827699 123.266272)
+		)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "Eco1.User")
+		(uuid "f4021750-b39e-4187-add8-8e8cfabb8e54")
+	)
+	(gr_line
+		(start 154.319982 66.419689)
+		(end 154.319976 121.819589)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "Edge.Cuts")
+		(uuid "260141ed-7fc7-4e81-91eb-bdea72d8df5d")
+	)
+	(gr_arc
+		(start 154.319982 66.419689)
+		(mid 154.404509 66.017357)
+		(end 154.643782 65.683034)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "Edge.Cuts")
+		(uuid "632ab89b-cda4-4e7c-a402-0a2da7da67f8")
+	)
+	(gr_arc
+		(start 154.643782 65.683034)
+		(mid 177.524181 51.586878)
+		(end 203.944324 46.668516)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "Edge.Cuts")
+		(uuid "bc9c0dd9-e9c9-4f06-9793-1c3ceb5b0f57")
+	)
+	(gr_arc
+		(start 154.793377 122.668945)
+		(mid 154.446319 122.305775)
+		(end 154.319976 121.819589)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "Edge.Cuts")
+		(uuid "0dfc547e-8012-4ec6-8394-57090abe5d57")
+	)
+	(gr_arc
+		(start 182.894889 130.369933)
+		(mid 168.326092 128.409813)
+		(end 154.793377 122.668945)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "Edge.Cuts")
+		(uuid "16c9245e-e16b-49e7-8c69-0f5a910842bc")
+	)
+	(gr_arc
+		(start 203.944324 46.668516)
+		(mid 227.022147 49.210157)
+		(end 248.99378 56.713034)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "Edge.Cuts")
+		(uuid "05c6845c-d87c-4c9f-bf69-1fbb2133a2ef")
+	)
+	(gr_line
+		(start 208.95677 130.369593)
+		(end 182.894889 130.369933)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "Edge.Cuts")
+		(uuid "16d980ad-97aa-43af-b09d-a6741db6eb04")
+	)
+	(gr_arc
+		(start 208.95677 130.369593)
+		(mid 227.682547 132.834773)
+		(end 245.132311 140.062329)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "Edge.Cuts")
+		(uuid "872fb758-aae0-4d1b-bbd0-6e9054fe09d7")
+	)
+	(gr_arc
+		(start 248.99378 56.713034)
+		(mid 249.413092 57.082181)
+		(end 249.569038 57.618609)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "Edge.Cuts")
+		(uuid "c1fc61d2-1f1a-4657-bd4f-2c5e9242ca20")
+	)
+	(gr_line
+		(start 249.569037 72.314471)
+		(end 249.569038 57.618609)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "Edge.Cuts")
+		(uuid "0cce80bb-62ee-4eeb-ba5d-b6df320d3c25")
+	)
+	(gr_arc
+		(start 250.069042 72.814472)
+		(mid 249.715487 72.668025)
+		(end 249.569037 72.314471)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "Edge.Cuts")
+		(uuid "86b98a03-f925-4c7b-9acc-2a1d903ea05d")
+	)
+	(gr_line
+		(start 250.069042 72.814472)
+		(end 251.568981 72.814298)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "Edge.Cuts")
+		(uuid "2c337d5f-f368-4ace-9fb4-afb75dc779b7")
+	)
+	(gr_arc
+		(start 251.568981 72.814298)
+		(mid 252.983242 73.400142)
+		(end 253.568966 74.814434)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "Edge.Cuts")
+		(uuid "2fc10f21-6848-4759-86ce-108769856ccc")
+	)
+	(gr_line
+		(start 252.514998 144.324731)
+		(end 245.132311 140.062329)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "Edge.Cuts")
+		(uuid "2f2090dd-983f-43cd-a10e-2aef0166dbe4")
+	)
+	(gr_line
+		(start 253.568966 74.814434)
+		(end 253.569138 76.064364)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "Edge.Cuts")
+		(uuid "967d392f-c967-4616-9691-27bae7ed2959")
+	)
+	(gr_arc
+		(start 253.881031 143.958696)
+		(mid 253.273836 144.424677)
+		(end 252.514998 144.324731)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "Edge.Cuts")
+		(uuid "5506a251-472f-4ff1-9049-6c51d04e1bed")
+	)
+	(gr_line
+		(start 253.881031 143.958696)
+		(end 266.603286 121.922911)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "Edge.Cuts")
+		(uuid "3672588b-be23-4318-abaa-74c3019660da")
+	)
+	(gr_arc
+		(start 254.069147 76.564362)
+		(mid 253.715593 76.417917)
+		(end 253.569138 76.064364)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "Edge.Cuts")
+		(uuid "b19bd949-cf65-4da7-9761-1dafe918b75f")
+	)
+	(gr_line
+		(start 254.109614 76.564362)
+		(end 254.069147 76.564362)
+		(stroke
+			(width 0.05)
+			(type default)
+		)
+		(layer "Edge.Cuts")
+		(uuid "dc3dddf3-e291-4063-a181-656cd353f1cc")
+	)
+	(gr_arc
+		(start 254.109614 76.564362)
+		(mid 254.180325 76.593651)
+		(end 254.209614 76.664362)
+		(stroke
+			(width 0.05)
+			(type default)
+		)
+		(layer "Edge.Cuts")
+		(uuid "02a99e7b-f738-40d8-8424-f980736e666f")
+	)
+	(gr_line
+		(start 254.209614 76.664362)
+		(end 254.209614 86.726078)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "Edge.Cuts")
+		(uuid "c0f0857b-d42c-4376-9859-492de2d61bd0")
+	)
+	(gr_arc
+		(start 255.209614 87.726078)
+		(mid 254.502507 87.433185)
+		(end 254.209614 86.726078)
+		(stroke
+			(width 0.05)
+			(type default)
+		)
+		(layer "Edge.Cuts")
+		(uuid "e432a54e-100d-4630-9559-d3c0d5f17971")
+	)
+	(gr_line
+		(start 255.209614 87.726078)
+		(end 262.709614 87.726078)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "Edge.Cuts")
+		(uuid "bb8de246-1dee-4d71-bbf5-e7bd72967f29")
+	)
+	(gr_arc
+		(start 263.709614 76.664362)
+		(mid 263.738903 76.593651)
+		(end 263.809614 76.564362)
+		(stroke
+			(width 0.05)
+			(type default)
+		)
+		(layer "Edge.Cuts")
+		(uuid "20cd45a7-8639-4a68-bbe7-5305c6f541d9")
+	)
+	(gr_arc
+		(start 263.709614 86.726078)
+		(mid 263.416721 87.433185)
+		(end 262.709614 87.726078)
+		(stroke
+			(width 0.05)
+			(type default)
+		)
+		(layer "Edge.Cuts")
+		(uuid "7ca2f959-98ff-47cb-b883-412fe28d8ba1")
+	)
+	(gr_line
+		(start 263.709614 86.726078)
+		(end 263.709614 76.664362)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "Edge.Cuts")
+		(uuid "a399a0a9-60e4-42ec-a40f-48490526f4da")
+	)
+	(gr_line
+		(start 263.84999 76.563759)
+		(end 263.809614 76.564362)
+		(stroke
+			(width 0.05)
+			(type default)
+		)
+		(layer "Edge.Cuts")
+		(uuid "3ea776db-b321-4db5-859a-2037a1cf8db7")
+	)
+	(gr_arc
+		(start 264.349959 76.063763)
+		(mid 264.203505 76.417286)
+		(end 263.84999 76.563759)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "Edge.Cuts")
+		(uuid "9e028845-b1fb-41d2-b300-57d05feb7fa7")
+	)
+	(gr_line
+		(start 264.349996 76.063763)
+		(end 264.350169 74.813834)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "Edge.Cuts")
+		(uuid "c8a12619-f73d-490a-bbc5-840244f89149")
+	)
+	(gr_arc
+		(start 264.350169 74.813834)
+		(mid 264.935987 73.399573)
+		(end 266.350305 72.813848)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "Edge.Cuts")
+		(uuid "0fa742f2-7c12-4ebd-9432-cbb01d8e068e")
+	)
+	(gr_arc
+		(start 266.350305 72.813848)
+		(mid 267.764503 73.399732)
+		(end 268.350295 74.813983)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "Edge.Cuts")
+		(uuid "c391331f-01f2-4ae4-a95e-0c048967d177")
+	)
+	(gr_arc
+		(start 268.349974 114.598748)
+		(mid 267.892889 118.3601)
+		(end 266.603286 121.922911)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "Edge.Cuts")
+		(uuid "5d10070d-14ca-4893-a5dc-918cc21c3208")
+	)
+	(gr_line
+		(start 268.350295 74.813983)
+		(end 268.349978 114.598748)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "Edge.Cuts")
+		(uuid "778ab6af-42be-4322-b8ad-ba89f4cd1f9d")
+	)
+	(embedded_fonts no)
+)

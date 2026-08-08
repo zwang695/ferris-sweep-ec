@@ -1,0 +1,63 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+project_root="$(cd "$(dirname "$0")/.." && pwd)"
+source_root="$project_root/references/upstream/tako"
+source_pcb="$source_root/rev1/pcb"
+destination="$project_root/hardware/rev-a"
+expected_commit="5aa952ab5d5dc0c83aef36756252b27efc64e4cd"
+
+if [[ ! -d "$source_root/.git" ]]; then
+    printf 'Missing %s; clone https://github.com/ssbb/tako there first.\n' "$source_root" >&2
+    exit 1
+fi
+
+actual_commit="$(git -C "$source_root" rev-parse HEAD)"
+if [[ "$actual_commit" != "$expected_commit" ]]; then
+    printf 'Refusing unreviewed source commit %s (expected %s).\n' "$actual_commit" "$expected_commit" >&2
+    exit 1
+fi
+
+if [[ -e "$destination/ferris-sweep-ec.kicad_sch" ]]; then
+    printf 'Refusing to overwrite the existing Revision A source.\n' >&2
+    exit 1
+fi
+
+mkdir -p "$destination/ferris_sweep_ec.pretty"
+cp "$source_pcb/tako.kicad_sch" "$destination/ferris-sweep-ec.kicad_sch"
+cp "$source_pcb/tako.kicad_pcb" "$destination/ferris-sweep-ec.kicad_pcb"
+cp "$source_pcb/tako.kicad_pro" "$destination/ferris-sweep-ec.kicad_pro"
+cp "$source_pcb/tako.kicad_sym" "$destination/ferris-sweep-ec.kicad_sym"
+cp "$source_pcb/fp-lib-table" "$destination/fp-lib-table"
+cp "$source_pcb/sym-lib-table" "$destination/sym-lib-table"
+cp "$source_pcb/tako.pretty/"*.kicad_mod "$destination/ferris_sweep_ec.pretty/"
+
+sed -i \
+    -e 's/tako\.pretty/ferris_sweep_ec.pretty/g' \
+    -e 's/tako\.kicad_sym/ferris-sweep-ec.kicad_sym/g' \
+    -e 's/(name "tako")/(name "ferris_sweep_ec")/g' \
+    -e 's/tako:/ferris_sweep_ec:/g' \
+    "$destination/ferris-sweep-ec.kicad_sch" \
+    "$destination/ferris-sweep-ec.kicad_pcb" \
+    "$destination/fp-lib-table" \
+    "$destination/sym-lib-table"
+
+# Project-local tables enumerate the KiCad standard libraries used by the
+# imported design so headless ERC/DRC does not depend on a user's global table.
+sed -i '/(version 7)/a\
+  (lib (name "Button_Switch_SMD")(type "KiCad")(uri "${KICAD10_FOOTPRINT_DIR}/Button_Switch_SMD.pretty")(options "")(descr ""))\
+  (lib (name "Capacitor_SMD")(type "KiCad")(uri "${KICAD10_FOOTPRINT_DIR}/Capacitor_SMD.pretty")(options "")(descr ""))\
+  (lib (name "Package_SO")(type "KiCad")(uri "${KICAD10_FOOTPRINT_DIR}/Package_SO.pretty")(options "")(descr ""))\
+  (lib (name "Resistor_SMD")(type "KiCad")(uri "${KICAD10_FOOTPRINT_DIR}/Resistor_SMD.pretty")(options "")(descr ""))' \
+  "$destination/fp-lib-table"
+
+sed -i '/(version 7)/a\
+  (lib (name "74xx")(type "KiCad")(uri "${KICAD10_SYMBOL_DIR}/74xx.kicad_sym")(options "")(descr ""))\
+  (lib (name "Device")(type "KiCad")(uri "${KICAD10_SYMBOL_DIR}/Device.kicad_sym")(options "")(descr ""))\
+  (lib (name "Jumper")(type "KiCad")(uri "${KICAD10_SYMBOL_DIR}/Jumper.kicad_sym")(options "")(descr ""))\
+  (lib (name "Mechanical")(type "KiCad")(uri "${KICAD10_SYMBOL_DIR}/Mechanical.kicad_sym")(options "")(descr ""))\
+  (lib (name "Switch")(type "KiCad")(uri "${KICAD10_SYMBOL_DIR}/Switch.kicad_sym")(options "")(descr ""))\
+  (lib (name "power")(type "KiCad")(uri "${KICAD10_SYMBOL_DIR}/power.kicad_sym")(options "")(descr ""))' \
+  "$destination/sym-lib-table"
+
+printf 'Imported Tako Rev1 %s into %s\n' "$actual_commit" "$destination"

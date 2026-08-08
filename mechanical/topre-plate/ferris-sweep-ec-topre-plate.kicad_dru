@@ -1,0 +1,32 @@
+(version 1)
+
+# The switch housing openings are intentionally copper- and mask-plated around
+# their routed Edge.Cuts.  A negative clearance is KiCad's documented mechanism
+# for permitting a deliberate copper/edge overlap.
+(rule "Topre plated switch cutouts may meet routed edges"
+    (condition "A.memberOfFootprint('SW*')")
+    (constraint edge_clearance (min -1mm)))
+
+# Several mounting-hole barrels intentionally merge into the adjacent plated
+# switch-cutout ring.  Both features are mechanical, un-netted plate copper.
+(rule "Mechanical plate copper may merge"
+    (condition "(A.Reference == 'SW*' && B.Reference == 'H*') || (A.Reference == 'H*' && B.Reference == 'SW*')")
+    (constraint clearance (min -1mm)))
+
+# The drilled mounting-hole barrels pass 0.075 mm from the merged mechanical
+# copper.  This is a single continuous plated mechanical feature, not signal
+# copper that needs electrical isolation.
+(rule "Mechanical plate copper may meet mounting-hole drills"
+    (condition "(A.Reference == 'SW*' && B.Reference == 'H*') || (A.Reference == 'H*' && B.Reference == 'SW*')")
+    (constraint hole_clearance (min -1mm)))
+
+# The outer edge intentionally meets the H14 plated mounting-hole barrel.
+(rule "H14 may meet the outer routed edge"
+    (condition "A.memberOfFootprint('H14')")
+    (constraint edge_clearance (min -1mm)))
+
+# This plate contains only un-netted mechanical copper.  Every mask bridge in
+# the file is the aperture joining a mounting barrel to a switch-cutout ring.
+(rule "Mechanical plate mask openings may merge"
+    (constraint bridged_mask)
+    (severity ignore))

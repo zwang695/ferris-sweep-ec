@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+project_root="$(cd "$(dirname "$0")/.." && pwd)"
+"$project_root/scripts/check-hardware"
+"$project_root/scripts/check-models"
+"$project_root/scripts/check-firmware"
+"$project_root/scripts/generate-production"
+printf 'All currently automated Revision A gates passed.\n'

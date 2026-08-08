@@ -1,0 +1,4 @@
+(fp_lib_table
+  (version 7)
+  (lib (name "ferris_sweep_ec")(type "KiCad")(uri "${KIPRJMOD}/../../hardware/rev-a/ferris_sweep_ec.pretty")(options "")(descr ""))
+)

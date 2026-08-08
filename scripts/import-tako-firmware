@@ -1,0 +1,64 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+project_root="$(cd "$(dirname "$0")/.." && pwd)"
+source_repo="$project_root/references/upstream/ssbb_qmk_firmware"
+source_keyboard="$source_repo/keyboards/ssbb/tako"
+destination="$project_root/firmware/qmk/keyboards/ferris_sweep_ec"
+expected_commit="5d3c06185eee1663503bfd346dc5433c1a48a67a"
+
+if [[ ! -d "$source_repo/.git" ]]; then
+    printf 'Missing %s; clone https://github.com/ssbb/qmk_firmware there first.\n' "$source_repo" >&2
+    exit 1
+fi
+
+actual_commit="$(git -C "$source_repo" rev-parse HEAD)"
+if [[ "$actual_commit" != "$expected_commit" ]]; then
+    printf 'Refusing unreviewed source commit %s (expected %s).\n' "$actual_commit" "$expected_commit" >&2
+    exit 1
+fi
+
+if [[ -e "$destination/info.json" ]]; then
+    printf 'Refusing to overwrite the existing Revision A firmware.\n' >&2
+    exit 1
+fi
+
+mkdir -p "$destination/keymaps/default" "$destination/rev_a"
+cp "$source_keyboard/config.h" "$destination/config.h"
+cp "$source_keyboard/ec_analog.c" "$destination/ec_analog.c"
+cp "$source_keyboard/ec_analog.h" "$destination/ec_analog.h"
+cp "$source_keyboard/ec_switch_matrix.c" "$destination/ec_switch_matrix.c"
+cp "$source_keyboard/ec_switch_matrix.h" "$destination/ec_switch_matrix.h"
+cp "$source_keyboard/info.json" "$destination/info.json"
+cp "$source_keyboard/keymaps/default/keymap.json" "$destination/keymaps/default/keymap.json"
+cp "$source_keyboard/rules.mk" "$destination/rules.mk"
+cp "$source_keyboard/rev1/config.h" "$destination/rev_a/config.h"
+cp "$source_keyboard/rev1/halconf.h" "$destination/rev_a/halconf.h"
+cp "$source_keyboard/rev1/info.json" "$destination/rev_a/info.json"
+cp "$source_keyboard/rev1/matrix.c" "$destination/rev_a/matrix.c"
+cp "$source_keyboard/rev1/mcuconf.h" "$destination/rev_a/mcuconf.h"
+cp "$source_keyboard/rev1/rules.mk" "$destination/rev_a/rules.mk"
+
+sed -i \
+    -e 's#ssbb/tako/rev1#ferris_sweep_ec/rev_a#g' \
+    "$destination/rules.mk"
+
+sed -i \
+    -e 's/"manufacturer": "ssbb"/"manufacturer": "ferris-sweep-ec contributors"/' \
+    -e 's/"keyboard_name": "Tako"/"keyboard_name": "Ferris Sweep EC"/' \
+    -e 's/"maintainer": "ssbb"/"maintainer": "ferris-sweep-ec contributors"/' \
+    -e '/"url": "https:\/\/github.com\/ssbb\/tako",/d' \
+    -e 's/"device_version": "0.0.1"/"device_version": "0.1.0"/' \
+    -e 's/"vid": "0xECBB"/"vid": "0xFEED"/' \
+    "$destination/info.json"
+
+sed -i \
+    -e 's/"pid": "0xEC01"/"pid": "0xEC34"/' \
+    "$destination/rev_a/info.json"
+
+sed -i \
+    -e 's/My awesome keymap/Default Ferris Sweep EC diagnostic keymap/' \
+    -e 's#"keyboard": "ferris/0_1"#"keyboard": "ferris_sweep_ec/rev_a"#' \
+    "$destination/keymaps/default/keymap.json"
+
+printf 'Imported Tako firmware %s into %s\n' "$actual_commit" "$destination"

@@ -1,0 +1,22 @@
+{
+    "manufacturer": "ferris-sweep-ec contributors",
+    "keyboard_name": "Ferris Sweep EC",
+    "maintainer": "ferris-sweep-ec contributors",
+    "usb": {
+        "device_version": "0.1.0",
+        "vid": "0xFEED",
+        "shared_endpoint": {
+            "keyboard": true
+        }
+    },
+    "build": {
+        "lto": true
+    },
+    "split": {
+        "enabled": true
+    },
+    "layout_aliases": {
+        "LAYOUT": "LAYOUT_split_3x5_2"
+    },
+    "community_layouts": ["split_3x5_2"]
+}

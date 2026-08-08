@@ -1,0 +1,41 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+project_root="$(cd "$(dirname "$0")/.." && pwd)"
+qmk_root="$project_root/references/upstream/qmk_firmware"
+overlay="$project_root/firmware/qmk/keyboards/ferris_sweep_ec"
+expected_commit="9caa5f871ddb9813c7370708be62d7a3e1cfeb75"
+
+if [[ ! -d "$qmk_root/.git" ]]; then
+    printf 'Missing pinned upstream QMK checkout at %s.\n' "$qmk_root" >&2
+    exit 1
+fi
+actual_commit="$(git -C "$qmk_root" rev-parse HEAD)"
+if [[ "$actual_commit" != "$expected_commit" ]]; then
+    printf 'Refusing unreviewed QMK commit %s (expected %s).\n' \
+        "$actual_commit" "$expected_commit" >&2
+    exit 1
+fi
+
+mkdir -p "$qmk_root/keyboards/ferris_sweep_ec"
+rsync -a --delete "$overlay/" "$qmk_root/keyboards/ferris_sweep_ec/"
+
+(
+    cd "$qmk_root"
+    qmk --config-file /dev/null lint -kb ferris_sweep_ec/rev_a
+    for keymap in default diagnostic; do
+        qmk --config-file /dev/null compile -kb ferris_sweep_ec/rev_a \
+            -km "$keymap" -e CONVERT_TO=rp2040_ce
+    done
+)
+
+mkdir -p "$project_root/production/generated/firmware"
+for keymap in default diagnostic; do
+    artifact="$qmk_root/ferris_sweep_ec_rev_a_${keymap}_rp2040_ce.uf2"
+    if [[ ! -s "$artifact" ]]; then
+        printf 'Expected firmware artifact was not produced: %s\n' "$artifact" >&2
+        exit 1
+    fi
+    cp "$artifact" "$project_root/production/generated/firmware/"
+    printf 'Firmware verified: %s\n' "$artifact"
+done

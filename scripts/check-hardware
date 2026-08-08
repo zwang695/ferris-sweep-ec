@@ -1,0 +1,28 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+project_root="$(cd "$(dirname "$0")/.." && pwd)"
+reports="$project_root/production/generated/reports"
+mkdir -p "$reports"
+
+"$project_root/scripts/kicad-cli" sch erc --format json \
+    --output "$reports/controller-erc.json" \
+    "$project_root/hardware/rev-a/ferris-sweep-ec.kicad_sch"
+"$project_root/scripts/kicad-cli" sch export netlist --format kicadxml \
+    --output "$reports/controller-netlist.xml" \
+    "$project_root/hardware/rev-a/ferris-sweep-ec.kicad_sch"
+"$project_root/scripts/kicad-cli" pcb drc --format json \
+    --output "$reports/controller-drc.json" \
+    "$project_root/hardware/rev-a/ferris-sweep-ec.kicad_pcb"
+"$project_root/scripts/kicad-cli" pcb drc --schematic-parity --format json \
+    --output "$reports/controller-parity.json" \
+    "$project_root/hardware/rev-a/ferris-sweep-ec.kicad_pcb"
+"$project_root/scripts/kicad-cli" pcb drc --format json \
+    --output "$reports/topre-plate-drc.json" \
+    "$project_root/mechanical/topre-plate/ferris-sweep-ec-topre-plate.kicad_pcb"
+"$project_root/scripts/kicad-cli" pcb drc --format json \
+    --output "$reports/bottom-plate-drc.json" \
+    "$project_root/mechanical/bottom-plate/ferris-sweep-ec-bottom-plate.kicad_pcb"
+
+python3 "$project_root/scripts/verify-kicad-reports.py"
+python3 "$project_root/tests/verify-netlist.py"

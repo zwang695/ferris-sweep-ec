@@ -1,0 +1,8 @@
+(version 1)
+
+# H15 and H16 are the two narrow controller-side mechanical mounting barrels.
+# Their 0.2502 mm copper-to-route clearance is retained from the known-built
+# reference while all other copper-to-edge clearance stays at 0.5 mm.
+(rule "Controller-side mounting-hole edge clearance"
+    (condition "A.memberOfFootprint('H15') || A.memberOfFootprint('H16')")
+    (constraint edge_clearance (min 0.25mm)))

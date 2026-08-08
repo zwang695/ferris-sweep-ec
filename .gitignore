@@ -1,0 +1,29 @@
+# KiCad backups, caches, and autosaves
+*-backups/
+*.bak
+*.bck
+*.kicad_prl
+*.lck
+~*.lck
+
+# QMK build output
+.build/
+*.bin
+*.elf
+*.hex
+*.map
+*.uf2
+
+# Generated manufacturing and report outputs
+production/generated/
+reports/generated/
+
+# Read-only upstream working clones; exact commits are recorded in the audit
+references/upstream/
+
+# Editor and OS files
+.DS_Store
+Thumbs.db
+.vscode/
+__pycache__/
+*.pyc

@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+# KiCad is installed as a user-scoped Flatpak so every contributor can use the
+# same command from project scripts without depending on a system package.
+exec flatpak run --command=kicad-cli org.kicad.KiCad "$@"
